@@ -32,24 +32,7 @@ namespace AddressBookSystem
             string zip = Console.ReadLine();
 
             Console.WriteLine("Enter Phone Number:");
-            string phoneNumber = Console.ReadLine();
 
-            Console.WriteLine("Enter Email:");
-            string email = Console.ReadLine();
-
-            Contact newContact = new Contact
-            {
-                FirstName = firstName,
-                LastName = lastName,
-                Address = address,
-                City = city,
-                State = state,
-                Zip = zip,
-                PhoneNumber = phoneNumber,
-                Email = email
-            };
-
-            addressBook.AddContact(newContact);
 
         }
     }

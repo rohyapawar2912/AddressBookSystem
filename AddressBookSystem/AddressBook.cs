@@ -59,6 +59,21 @@ namespace AddressBookSystem
             Console.WriteLine("Contact Not Found!");
         }
 
+        public void DeleteContact(string firstName, string lastName)
+        {
+            for (int i = 0; i < contacts.Count; i++)
+            {
+                if (contacts[i].FirstName == firstName && contacts[i].LastName == lastName)
+                {
+                    contacts.RemoveAt(i);
+                    Console.WriteLine("Contact Deleted Successfully.");
+                    return;
+                }
+            }
+
+            Console.WriteLine("Contact Not Found!");
+        }
+
         public void DisplayContacts()
         {
             Console.WriteLine("Address Book Contacts:");

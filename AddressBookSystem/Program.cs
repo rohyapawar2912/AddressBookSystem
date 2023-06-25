@@ -10,34 +10,49 @@ namespace AddressBookSystem
     {
         static void Main(string[] args)
         {
-            Contact contact = new Contact();
+            AddressBook addressBook = new AddressBook();
 
+            Console.WriteLine("Add New Contact");
             Console.WriteLine("Enter First Name:");
-            contact.FirstName = Console.ReadLine();
+            string firstName = Console.ReadLine();
 
             Console.WriteLine("Enter Last Name:");
-            contact.LastName = Console.ReadLine();
+            string lastName = Console.ReadLine();
 
             Console.WriteLine("Enter Address:");
-            contact.Address = Console.ReadLine();
+            string address = Console.ReadLine();
 
             Console.WriteLine("Enter City:");
-            contact.City = Console.ReadLine();
+            string city = Console.ReadLine();
 
             Console.WriteLine("Enter State:");
-            contact.State = Console.ReadLine();
+            string state = Console.ReadLine();
 
             Console.WriteLine("Enter Zip:");
-            contact.Zip = Console.ReadLine();
+            string zip = Console.ReadLine();
 
             Console.WriteLine("Enter Phone Number:");
-            contact.PhoneNumber = Console.ReadLine();
+            string phoneNumber = Console.ReadLine();
 
             Console.WriteLine("Enter Email:");
-            contact.Email = Console.ReadLine();
+            string email = Console.ReadLine();
+
+            Contact newContact = new Contact
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Address = address,
+                City = city,
+                State = state,
+                Zip = zip,
+                PhoneNumber = phoneNumber,
+                Email = email
+            };
+
+            addressBook.AddContact(newContact);
 
             Console.WriteLine();
-            contact.DisplayContactInfo();
+            addressBook.DisplayContacts();
         }
     }
 }

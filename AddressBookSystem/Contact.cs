@@ -29,4 +29,5 @@ namespace AddressBookSystem
             Console.WriteLine("Phone Number: " + PhoneNumber);
             Console.WriteLine("Email: " + Email);
         }
+    }
 }

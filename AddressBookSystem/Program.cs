@@ -51,8 +51,6 @@ namespace AddressBookSystem
 
             addressBook.AddContact(newContact);
 
-            Console.WriteLine();
-            addressBook.DisplayContacts();
         }
     }
 }
